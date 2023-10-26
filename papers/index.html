@@ -1,0 +1,221 @@
+<!doctype html>
+<html class="" style="">
+
+<!-- head -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>AI Lab @ AICFE - 人工智能实验室</title>
+	<meta name="google-site-verification" content="zVfNgWpnktSoBlmPD9FmAivRwc7AmrJ3HcI4ANzb_ag" />
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="baidu-site-verification" content="r5znRc9TGh">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="Keywords"
+		content="BNU AI LAB, 北京师范大学|人工智能实验室, 北师大|人工智能实验室, 北师大高精尖AI, AI LAB">
+	<meta name="description"
+		content="AI Lab（人工智能实验室）作为未来教育高精尖创新中心的科研部门之一，致力于借助计算机科学和人工智能相关领域的技术，全面理解学习者的学习过程，驱动个性化学习和泛在学习的实现；同时利用技术改善教育教学环境，提升教育质量，促进教育公平。">
+	<meta name="format-detection" content="telephone=no,email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="author" content="AICFE">
+	<meta name="copyright" content="AICFE">
+	<meta name="robots" content="index,follow">
+	<link href="/images/logos.png" type="image/png" rel="shortcut icon">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/idangerous.swiper.css">
+
+	<script>
+	(function(doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var designWidth  = 1920; // 设计稿宽度
+				var designHeight = 1080; // 设计稿高度
+				var maxWidth     = 1920; // 设计稿最大宽度
+				var maxHeight    = 1080; // 设计稿最大高度
+				var clientWidth  = docEl.clientWidth;
+				var clientHeight = docEl.clientHeight;
+				var baseFontSize = 100; // 根元素基准字体大小
+				if ( (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+					//移动端
+					docEl.setAttribute("class", "m"); 
+					baseFontSize = 256; // 根元素基准字体大小
+					// console.log('m');
+					$('.header').addClass('fixed');
+				} else {
+					//PC端
+					if(docEl.getAttribute("class") == "index")
+						docEl.setAttribute("class", "pc indexpc");
+					else
+						docEl.setAttribute("class", "pc pagepc");
+					baseFontSize = 100; // 根元素基准字体大小
+					// console.log('pc');
+				}
+
+				if (!clientWidth) return;
+				if (clientWidth / clientHeight > designWidth / designHeight) {
+					if (clientHeight <= maxHeight) {
+						docEl.style.fontSize = clientHeight / designHeight * baseFontSize + "px";
+					} else {
+						docEl.style.fontSize = maxHeight / designHeight * baseFontSize + "px";
+					}
+				} else {
+					if (clientWidth <= maxWidth) {
+						docEl.style.fontSize = clientWidth / designWidth * baseFontSize + "px";
+					} else {
+						docEl.style.fontSize = maxWidth / designWidth * baseFontSize + "px";
+					}
+				}
+			};
+
+		// Abort if browser does not support addEventListener
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+	</script>
+
+	<script type="text/javascript" src="/js/idangerous.swiper.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="/js/sona.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/jquery.i18n.properties.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+</head>
+</html>
+
+<style type="text/css">
+	a:link{color:-webkit-link}
+	a:visited{color:black}
+</style>
+
+<body style="" class="lang-cn">
+	<section class="g-wrap">
+		<!-- header -->
+		<div class="header fixed on">
+		<h1 class="head-logo" title="AI Lab">AI Lab</h1>
+		<a class="head-logolink" href="index">AI Lab</a>
+		<div class="lang">
+			<a href="javascript:;" id="en" class=" ">En</a>
+			<span>/</span>
+			<a href="javascript:;" id="cn" class="on">中</a>
+		</div>
+		<div class="navbar">
+			<ul>
+				<li )>
+					<a href="/index">
+						<span>首页</span>
+					</a>
+				</li>
+				<li )>
+					<a href="/members">
+						<span>成员</span>
+					</a>
+				</li>
+				<li class="active")>
+					<a href="/papers">
+						<span>研究成果</span>
+					</a>
+				</li>
+				<li>
+					<a href="/news">
+						<span>新闻</span>
+					</a>
+				</li>
+				<li>
+					<a href="/academic">
+						<span>合作</span>
+					</a>
+				</li>
+				<li>
+					<a href="/recruit">
+						<span>招聘</span>
+					</a>
+				</li>
+				<li>
+					<a href="/data">
+						<span>数据</span>
+					</a>
+				</li>
+				
+				<!--
+				<li th:class="${page} == 'about' ? 'active' : ''">
+					<a href="about">
+						<span>关于</span>
+					</a>
+				</li>
+				-->
+				
+			</ul>
+		</div>
+		<a href="javascript:;" class="nav_btn"></a>
+	</div>
+
+		<div class="container">
+			<div class="paper-title paper-list-tit">研究成果</div>
+			<div class="paper-content">
+				<div class="paper-main" style="font-size:16px; color:#000000;">
+					<p><strong>期刊论文 (2017-2020)</strong></p>
+					<dir>
+						<li>Muhammad Q. Memon, Yu Lu, Penghe Chen, Aasma Memon, and Muhammad S. Pathan, Zulfiqar A. Zardari, “An ensemble clustering approach for topic discovery using implicit text segmentation", <i>Journal of Information Science</i>, accepted in Apr 2020. [<a href="/download/papers/2020-6.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Yu Lu, Huayu Wu, Xin Liu, and Penghe Chen, “TourSense: A Framework for Tourist Identification and Analytics Using Transport Data", <i>IEEE Transactions on Knowledge and Data Engineering <b>(IEEE TKDE)</b></i>, vol.31, no.12, pp.2407-2422,2019. [<a href="/download/papers/2019-2.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Muhammad Q. Memon, Jingsha He, Yu Lu, Nafei Zhu, and Aasma Memon, “An Improvised Sub-Document Based Framework for Efficient Document Clustering", <i>Journal of Internet Technology</i>, vol.20, no.4, pp.1191-1203,2019. [<a href="/download/papers/2019-8.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Yu Lu, Jingjing Zhang, Baoping Li, Penghe Chen, and Zijun Zhuang, “Harnessing Commodity Wearable Devices to Capture Learner Engagement", <i>IEEE Access</i>, vol. 7, pp.15749-15757, 2019. [<a href="/download/papers/2019-1.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Yu Lu, Archan Misra, Wen Sun, and Huayu Wu, “Smartphone Sensing Meets Transport Data: A Collaborative Framework for Transportation Service Analytics", <i>IEEE Transactions on Mobile Computing <b>(IEEE TMC)</b></i>, vol.17, no.4, pp.945-960, 2018. [<a href="/download/papers/2018-4.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Yu Lu, Zeng Zeng, Huayu Wu, and Jingjing Zhang, “An Intelligent System for Taxi Service: Analysis, Prediction and Visualization", <i>AI Communications</i>, vol.31, no.1, pp.33-46, 2018. [<a href="/download/papers/2018-5.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Penghe Chen, Yu Lu, Vincent W. Zheng, Xiyang Chen, and Boda Yang, “KnowEdu: A System to Construct Knowledge Graph for Education", <i>IEEE Access</i>, vol. 6, pp.31553-31563, 2018. [<a href="/download/papers/2018-3.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Yu Lu, Sen Zhang, Zhiqiang Zhang, Wendong Xiao, and Shengquan Yu, “A Framework for Learning Analytics Using Commodity Wearable Devices", <i>Sensors</i>, vol. 17, no. 6. 2017. [<a href="/download/papers/2017-1.pdf" target="_blank">PDF</a>]</li></br>
+						<li>卢宇, 薛天琪, 陈鹏鹤, 余胜泉, “智能教育机器人系统构建及关键技术——以'智慧学伴'机器人为例”, <i>开放教育研究</i>, 26(02):83-91, 2020. [<a href="/download/papers/2020-4.pdf" target="_blank">PDF</a>]</li></br>
+						<li>谭红叶, 午泽鹏, 卢宇, 段庆龙, 李茹, 张虎, “基于代表性答案选择与注意力机制的短答案自动评分”, <i>中文信息学报</i>, 33(11):134-142, 2019. [<a href="/download/papers/2019-6.pdf" target="_blank">PDF</a>]</li></br>
+						<li>陈鹏鹤, 彭燕, 余胜泉, “AI好老师——智能育人助理系统设计与技术实现”, <i>开放教育研究</i>, 25(2):12-22, 2019. [<a href="/download/papers/2019-5.pdf" target="_blank">PDF</a>]</li></br>
+						<li>余胜泉, 彭燕, 卢宇, “基于人工智能的育人助理系统——'AI好老师'的体系结构与功能”, <i>开放教育研究</i>, 25(01):25-36, 2019. [<a href="/download/papers/2019-10.pdf" target="_blank">PDF</a>]</li></br>
+					</dir>
+					<p><strong>会议论文 (2017-2020)</strong></p>
+					<dir>
+						<li>Ken Kahn, Yu Lu, Jingjing Zhang, Niall Winters, and Ming Gao, "Deep Learning Programming by All", International Conference on Constructionism, Dublin, Ireland</i>, 2020. [<a href="/download/papers/2020-7.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Penghe Chen, Yu Lu, Yan Peng, Jiefei Liu, and Qi Xu, “Identification of Students' Need Deficiency Through A Dialogue System", <i>International Conference on Artificial Intelligence in Education <b>(AIED'2020)</b></i>, 2020. [<a href="/download/papers/2020-3.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Yu Lu, Deliang Wang, Qinggang Meng, and Penghe Chen, “Towards Interpretable Deep Learning Models for Knowledge Tracing", <i>International Conference on Artificial Intelligence in Education <b>(AIED'2020)</b></i>, 2020. [<a href="/download/papers/2020-2.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Yang Pian, Yu Lu, Yuqi Huang, and Ig Bittencourt, “A Gamified Solution to the Cold-Start Problem of Intelligent Tutoring System", <i>International Conference on Artificial Intelligence in Education <b>(AIED'2020)</b></i>, 2020. [<a href="/download/papers/2020-1.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Yan Peng, Penghe Chen, Yu Lu, Qinggang Meng, Qi Xu and Shengquan Yu, “A Task-Oriented Dialogue System for Moral Education", <i>International Conference on Artificial Intelligence in Education <b>(AIED'2019)</b></i>, Chicago, U.S., 2019. [<a href="/download/papers/2019-4.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Yang Pian, Yu Lu, Penghe Chen, and Qinglong Duan, “CogLearn: A Cognitive Graph-Oriented Online Learning System", <i>IEEE Conference on Data Engineering <b>(ICDE'2019)</b></i>, Demo Paper, Macau SAR, China, 2019. [<a href="/download/papers/2019-3.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Yu Lu, Chen Chen, Penghe Chen, Xiyang Chen, and Zijun Zhuang, “Smart Learning Partner: An Interactive Robot for Education", <i>International Conference on Artificial Intelligence in Education <b>(AIED'2018)</b></i>, London, UK, 2018. [<a href="/download/papers/2018-2.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Penghe Chen, Yu Lu, Vincent W. Zheng, and Yang Bian, “Prerequisite-Driven Deep Knowledge Tracing", <i>IEEE Conference on Data Mining <b>(ICDM'2018)</b></i>, Singapore, 2018. [<a href="/download/papers/2018-1.pdf" target="_blank">PDF</a>]</li></br>
+						<li>Penghe Chen, Yu Lu, Vincent W. Zheng, et al., “An Automatic Knowledge Graph Construction System for K-12 Education", <i>ACM Conference on Learning at Scale  <b>(L@S'2018)</b></i>, London, UK, 2018. [<a href="/download/papers/2018-6.pdf" target="_blank">PDF</a>]</li></br>
+					</dir>
+					<p><strong>专利 (2017-2020)</strong></p>
+					<dir>
+						<li>余胜泉;卢宇;杨博达;李葆萍.一种基于协同过滤思想的学习者学科总测成绩预测系统及方法，授权，2017.10，CN201710454618.9.</li></br>
+						<li>余胜泉;卢宇;庄梓君;李葆萍.一种基于网络学习环境的资源推荐系统及方法，授权，2018.01，CN201710799698.1.</li></br>
+						<li>余胜泉;陈锡洋;陈鹏鹤;卢宇.一种基于教育知识图谱的问答分析与处理方法及系统，公开实审中，2018.11，CN201810637048.1.</li></br>
+						<li>余胜泉;段庆龙;卢宇.一种结合短文本聚类和推荐机制的主观题批阅系统及方法，公开实审中，2018.11，CN201810499529.0.</li></br>
+						<li>余胜泉;陈鹏鹤;刘杰飞;卢宇.一种知识点导向的教育资源采集与分类的方法和系统，公开实审中，2020.04，CN202010200176.7.</li></br>
+						<li>卢宇;余胜泉;谭红叶;段庆龙.一种开放式简答题自动评分的方法和系统，公开实审中，2020.04 ， CN202010199902.8.</li></br>
+						<li>余胜泉;陈鹏鹤;刘杰飞;卢宇.一种基于短语结构树的相似题目识别方法和系统，公开实审中，2020.09，CN202010765054.2.</li></br>
+					</dir>
+					<p><strong>软件著作权 (2017-2020)</strong></p>
+					<dir>
+						<li>软件著作权，雷达数学智能学习导航及诊断分析系统【简称：雷达数学】V1.0, 著作号（2020SR0129571）, 原始取得，全部权利，2020.2 </li></br>
+						<li>软件著作权，基于智能机器人的语音交互学习软件【简称：小高老师】V1.0, 著作号（2017SR724344）, 原始取得，全部权利，2017.12 </li></br>
+					</dir>
+					<p><strong>在研系统</strong></p>
+					<dir>
+						<li> <a href="https://aic-fe.bnu.edu.cn/xwdt/xzsp/80445.html" target="_blank"> <span style="color:0000FF; text-decoration:underline;">雷达数学智能导学系统</span></a></li></br>        
+						<li> <a href="https://aic-fe.bnu.edu.cn/xwdt/xzsp/76921.html" target="_blank"><span style="color:0000FF; text-decoration:underline;">AI好老师智能育人助手</span></a></li></br>
+						<li> <a href="https://aic-fe.bnu.edu.cn/xwdt/xzsp/77163.html" target="_blank"><span style="color:0000FF; text-decoration:underline;">互动式智能教育机器人</span></a></li></br>
+					</dir>
+				</div>
+			</div>
+		</div>
+		<html>
+	<footer class="footer">
+		<div class="copyright">
+			Copyright © 2017-2021 BNU AICFE. All Rights Reserved.
+			<a href="https://beian.miit.gov.cn" target="_blank">京ICP备18047080号-1</a>
+		</div>
+	</footer>
+</html>
+	</section>
+</body>
+</html>
