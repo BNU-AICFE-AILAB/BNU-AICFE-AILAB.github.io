@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="" style="">
+
+<!-- head -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>AI Lab @ AICFE - 人工智能实验室</title>
+	<meta name="google-site-verification" content="zVfNgWpnktSoBlmPD9FmAivRwc7AmrJ3HcI4ANzb_ag" />
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="baidu-site-verification" content="r5znRc9TGh">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="Keywords"
+		content="BNU AI LAB, 北京师范大学|人工智能实验室, 北师大|人工智能实验室, 北师大高精尖AI, AI LAB">
+	<meta name="description"
+		content="AI Lab（人工智能实验室）作为未来教育高精尖创新中心的科研部门之一，致力于借助计算机科学和人工智能相关领域的技术，全面理解学习者的学习过程，驱动个性化学习和泛在学习的实现；同时利用技术改善教育教学环境，提升教育质量，促进教育公平。">
+	<meta name="format-detection" content="telephone=no,email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="author" content="AICFE">
+	<meta name="copyright" content="AICFE">
+	<meta name="robots" content="index,follow">
+	<link href="/images/logos.png" type="image/png" rel="shortcut icon">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/idangerous.swiper.css">
+
+	<script>
+	(function(doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var designWidth  = 1920; // 设计稿宽度
+				var designHeight = 1080; // 设计稿高度
+				var maxWidth     = 1920; // 设计稿最大宽度
+				var maxHeight    = 1080; // 设计稿最大高度
+				var clientWidth  = docEl.clientWidth;
+				var clientHeight = docEl.clientHeight;
+				var baseFontSize = 100; // 根元素基准字体大小
+				if ( (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+					//移动端
+					docEl.setAttribute("class", "m"); 
+					baseFontSize = 256; // 根元素基准字体大小
+					// console.log('m');
+					$('.header').addClass('fixed');
+				} else {
+					//PC端
+					if(docEl.getAttribute("class") == "index")
+						docEl.setAttribute("class", "pc indexpc");
+					else
+						docEl.setAttribute("class", "pc pagepc");
+					baseFontSize = 100; // 根元素基准字体大小
+					// console.log('pc');
+				}
+
+				if (!clientWidth) return;
+				if (clientWidth / clientHeight > designWidth / designHeight) {
+					if (clientHeight <= maxHeight) {
+						docEl.style.fontSize = clientHeight / designHeight * baseFontSize + "px";
+					} else {
+						docEl.style.fontSize = maxHeight / designHeight * baseFontSize + "px";
+					}
+				} else {
+					if (clientWidth <= maxWidth) {
+						docEl.style.fontSize = clientWidth / designWidth * baseFontSize + "px";
+					} else {
+						docEl.style.fontSize = maxWidth / designWidth * baseFontSize + "px";
+					}
+				}
+			};
+
+		// Abort if browser does not support addEventListener
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+	</script>
+
+	<script type="text/javascript" src="/js/idangerous.swiper.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="/js/sona.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/jquery.i18n.properties.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+</head>
+</html>
+
+<body style="" class="lang-cn">
+	<section class="g-wrap">
+		<!-- header -->
+		<div class="header fixed on">
+		<h1 class="head-logo" title="AI Lab">AI Lab</h1>
+		<a class="head-logolink" href="index">AI Lab</a>
+		<div class="lang">
+			<a href="javascript:;" id="en" class=" ">En</a>
+			<span>/</span>
+			<a href="javascript:;" id="cn" class="on">中</a>
+		</div>
+		<div class="navbar">
+			<ul>
+				<li )>
+					<a href="index">
+						<span>首页</span>
+					</a>
+				</li>
+				<li )>
+					<a href="members">
+						<span>成员</span>
+					</a>
+				</li>
+				<li )>
+					<a href="papers">
+						<span>研究成果</span>
+					</a>
+				</li>
+				<li>
+					<a href="news">
+						<span>新闻</span>
+					</a>
+				</li>
+				<li>
+					<a href="academic">
+						<span>合作</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="recruit">
+						<span>招聘</span>
+					</a>
+				</li>
+				<li>
+					<a href="data">
+						<span>数据</span>
+					</a>
+				</li>
+				
+				<!--
+				<li th:class="${page} == 'about' ? 'active' : ''">
+					<a href="about">
+						<span>关于</span>
+					</a>
+				</li>
+				-->
+				
+			</ul>
+		</div>
+		<a href="javascript:;" class="nav_btn"></a>
+	</div>
+
+		<div class="banner banner-recruit">
+			<h2>加入我们</h2>
+		</div>
+		
+		<div class="container">
+			<div class="recruit-list">
+				<div class="recruit-item">
+				</div>
+			</div>	
+		</div>
+
+		<!-- footer -->
+		<html>
+	<footer class="footer">
+		<div class="copyright">
+			Copyright © 2017-2021 BNU AICFE. All Rights Reserved.
+			<a href="https://beian.miit.gov.cn" target="_blank">京ICP备18047080号-1</a>
+		</div>
+	</footer>
+</html>
+	</section>
+</body>
+</html>

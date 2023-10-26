@@ -1,0 +1,597 @@
+<!doctype html>
+<html class="" style="">
+
+<!-- head -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>AI Lab @ AICFE - 人工智能实验室</title>
+	<meta name="google-site-verification" content="zVfNgWpnktSoBlmPD9FmAivRwc7AmrJ3HcI4ANzb_ag" />
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="baidu-site-verification" content="r5znRc9TGh">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="Keywords"
+		content="BNU AI LAB, 北京师范大学|人工智能实验室, 北师大|人工智能实验室, 北师大高精尖AI, AI LAB">
+	<meta name="description"
+		content="AI Lab（人工智能实验室）作为未来教育高精尖创新中心的科研部门之一，致力于借助计算机科学和人工智能相关领域的技术，全面理解学习者的学习过程，驱动个性化学习和泛在学习的实现；同时利用技术改善教育教学环境，提升教育质量，促进教育公平。">
+	<meta name="format-detection" content="telephone=no,email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="author" content="AICFE">
+	<meta name="copyright" content="AICFE">
+	<meta name="robots" content="index,follow">
+	<link href="/images/logos.png" type="image/png" rel="shortcut icon">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/idangerous.swiper.css">
+
+	<script>
+	(function(doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var designWidth  = 1920; // 设计稿宽度
+				var designHeight = 1080; // 设计稿高度
+				var maxWidth     = 1920; // 设计稿最大宽度
+				var maxHeight    = 1080; // 设计稿最大高度
+				var clientWidth  = docEl.clientWidth;
+				var clientHeight = docEl.clientHeight;
+				var baseFontSize = 100; // 根元素基准字体大小
+				if ( (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+					//移动端
+					docEl.setAttribute("class", "m"); 
+					baseFontSize = 256; // 根元素基准字体大小
+					// console.log('m');
+					$('.header').addClass('fixed');
+				} else {
+					//PC端
+					if(docEl.getAttribute("class") == "index")
+						docEl.setAttribute("class", "pc indexpc");
+					else
+						docEl.setAttribute("class", "pc pagepc");
+					baseFontSize = 100; // 根元素基准字体大小
+					// console.log('pc');
+				}
+
+				if (!clientWidth) return;
+				if (clientWidth / clientHeight > designWidth / designHeight) {
+					if (clientHeight <= maxHeight) {
+						docEl.style.fontSize = clientHeight / designHeight * baseFontSize + "px";
+					} else {
+						docEl.style.fontSize = maxHeight / designHeight * baseFontSize + "px";
+					}
+				} else {
+					if (clientWidth <= maxWidth) {
+						docEl.style.fontSize = clientWidth / designWidth * baseFontSize + "px";
+					} else {
+						docEl.style.fontSize = maxWidth / designWidth * baseFontSize + "px";
+					}
+				}
+			};
+
+		// Abort if browser does not support addEventListener
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+	</script>
+
+	<script type="text/javascript" src="/js/idangerous.swiper.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="/js/sona.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/jquery.i18n.properties.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+</head>
+</html>
+
+<body style="" class="lang-cn">
+	<section class="g-wrap data">
+		<!-- header -->
+		<div class="header fixed on">
+		<h1 class="head-logo" title="AI Lab">AI Lab</h1>
+		<a class="head-logolink" href="index">AI Lab</a>
+		<div class="lang">
+			<a href="javascript:;" id="en" class=" ">En</a>
+			<span>/</span>
+			<a href="javascript:;" id="cn" class="on">中</a>
+		</div>
+		<div class="navbar">
+			<ul>
+				<li )>
+					<a href="index">
+						<span>首页</span>
+					</a>
+				</li>
+				<li )>
+					<a href="members">
+						<span>成员</span>
+					</a>
+				</li>
+				<li )>
+					<a href="papers">
+						<span>研究成果</span>
+					</a>
+				</li>
+				<li>
+					<a href="news">
+						<span>新闻</span>
+					</a>
+				</li>
+				<li>
+					<a href="academic">
+						<span>合作</span>
+					</a>
+				</li>
+				<li>
+					<a href="recruit">
+						<span>招聘</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="data">
+						<span>数据</span>
+					</a>
+				</li>
+				
+				<!--
+				<li th:class="${page} == 'about' ? 'active' : ''">
+					<a href="about">
+						<span>关于</span>
+					</a>
+				</li>
+				-->
+				
+			</ul>
+		</div>
+		<a href="javascript:;" class="nav_btn"></a>
+	</div>
+
+
+
+		<div class="container">
+		<!-- start html -->
+
+			<div class="data-page-title data-title-common">数据</div>
+			
+			
+			<div class = "recruit-item">
+				<h3 class = "recruit-tit">数据集介绍</h3>
+				
+				
+				<p class = "description" style = "font-family: Arial;  margin: 20px;  text-align: justify;  font-size: 22px;  line-height: 35px;">
+				 			为了便于人工智能、学习科学和教育等相关领域研究者进行学习者建模，开展与学习过程相关的研究，
+							我们收集了学习者的基本信息、认知信息、家庭信息、学校信息和智能教学系统中的在线测评信息，
+							并对上述信息进行脱敏处理后，形成“智慧学伴”教育数据集。
+				</p>
+	
+				<p class = "description" style = "font-family: Arial;  margin: 20px;  text-align: justify;  font-size: 22px;  line-height: 35px;"> 
+							总体而言，“智慧学伴”教育数据集中包含4830名K-12阶段学习者的多维度数据，维度包含个人、家庭、学校、学业（主要来源于在线测评）、心理等。
+							其中，在线测评信息主要包括该组学习者初中阶段全过程的测评数据，
+							测评学科涵盖语文、数学、英语、物理、化学、生物、历史和地理共八个科目，
+							数据收集从2016年11月开始，持续到2019年6月，数据覆盖时间近3年。
+				</p>
+	
+				<p class = "description" style = "font-family: Arial;  margin: 20px;  text-align: justify;  font-size: 22px;  line-height: 35px;"> 
+							本数据集的下载和使用是免费的。具体数据字段的介绍，可参考本页面下方的“字段说明”部分。
+
+				</p>
+				<p class = "description" style = "font-family: Arial;  margin: 20px;  text-align: justify;  font-size: 22px;  line-height: 35px;"> 
+							如果我们的数据集对您的研究有帮助，请参考如下引用信息：
+							@inproceedings{SLP2021,
+							title={SLP: A Multi-Dimensional and Consecutive Dataset from K-12 Education},
+							author={Yu Lu, Yang Pian, Ziding Shen, Penghe Chen, Xiaoqing Li, Shengquan Yu},
+							booktitle={29th International Conference on Computers in Education (ICCE)},
+							year={2021}}
+				</p>
+			</div>
+			
+			<div class = "recruit-item">
+			
+				<h3 class = "recruit-tit">数据集下载</h3>
+				<div class="news-list clearfix">
+				
+					<div class="news-item">
+						<a href="/download/other/student.csv">
+							
+							<div class="news-text" style = "background: #381462">
+								<h4 class="news-title" style = "color: #ffffff; font-family:Microsoft YaHei">学习者个人基本信息</h4>
+								<p class="news-desc" style = "color: #ffffff;">
+									包含学习者人口统计学信息，以及所属学校、班级情况的相关信息。
+									<div class="news-date">2018.08.17</div>
+								<span class="readmore" style = "color: #ffffff;">Download &gt;</span>
+							</div>
+						</a>
+					</div>
+					
+					
+					
+										<div class="news-item">
+						<a href="/download/other/school.csv">
+							
+							<div class="news-text" style = "background: #381462">
+								<h4 class="news-title" style = "color: #ffffff; font-family:Microsoft YaHei">学校基本信息</h4>
+								<p class="news-desc" style = "color: #ffffff;">
+									包含学校的地理信息和师资情况信息等。
+									<div class="news-date">2018.08.17</div>
+								<span class="readmore" style = "color: #ffffff;">Download &gt;</span>
+							</div>
+						</a>
+					</div>
+					
+					
+				
+					<div class="news-item">
+						<a href="download-unit">
+							
+							<div class="news-text" style = "background: #381462">
+								<h4 class="news-title" style = "color: #ffffff; font-family:Microsoft YaHei">学习者在线测评信息-微测</h4>
+								<p class="news-desc" style = "color: #ffffff;">
+									微测作答数据由学习者进行在线练习时产生，单次的微测练习通常集中于某个特定知识点的巩固。每条数据都记录了某一学生在某道题目上的作答情况。
+									<div class="news-date">2018.08.17</div>
+								<span class="readmore" style = "color: #ffffff;">Download &gt;</span>
+							</div>
+						</a>
+					</div>
+					
+					<div class="news-item">
+						<a href="download-term">
+							
+							<div class="news-text" style = "background: #381462">
+								<h4 class="news-title" style = "color: #ffffff; font-family:Microsoft YaHei">学习者在线测评信息-总测</h4>
+								<p class="news-desc" style = "color: #ffffff;">
+									总测作答数据来源于学期内的统一考试，记录了大量参加统考的学生在各类不同知识点上的作答情况。每条数据中包含某一学生在某道总测题目上的得分等信息。
+									<div class="news-date">2018.08.17</div>
+								<span class="readmore" style = "color: #ffffff;">Download &gt;</span>
+							</div>
+						</a>
+					</div>
+					
+					<div class="news-item">
+						<a href="/download/other/family.csv">
+							
+							<div class="news-text" style = "background: #381462">
+								<h4 class="news-title" style = "color: #ffffff; font-family:Microsoft YaHei">学习者家庭信息</h4>
+								<p class="news-desc" style = "color: #ffffff;">
+									包含学习者家庭经济情况、家庭亲密程度、父母受教育程度和工作情况等相关信息。
+									<div class="news-date">2018.08.17</div>
+								<span class="readmore" style = "color: #ffffff;">Download &gt;</span>
+							</div>
+						</a>
+					</div>
+					
+					
+
+					<div class="news-item">
+						<a href="/download/other/psycho.csv">
+							
+							<div class="news-text" style = "background: #381462">
+								<h4 class="news-title" style = "color: #ffffff; font-family:Microsoft YaHei">学习者认知水平测验信息</h4>
+								<p class="news-desc" style = "color: #ffffff;">
+									包含学习者参与认知水平测试的得分信息。
+									<div class="news-date">2018.08.17</div>
+								<span class="readmore" style = "color: #ffffff;">Download &gt;</span>
+							</div>
+						</a>
+					</div>
+					
+				
+					
+					
+				</div>
+			</div>
+
+			<div class = "recruit-item">
+				<h3 class = "recruit-tit">字段说明</h3>
+						<h5>学习者个人基本信息数据字段说明</h5>
+						
+						<div class="table_grad scroll_tablex">
+						      <table class="table_tab responsive">
+						            <tr>
+						               
+						               <th>No.</th>
+						               <th>Field Name</th>						               
+						               <th>Description</th>
+						               
+						           </tr>
+
+						           <tr>     
+						                <td>1</td>
+						                <td class="oneline onelineTd">student_id</td>						                
+						                <td>The unique identification number of student</td>
+						            </tr>						            
+						            
+						            <tr>     
+						                <td>2</td>
+						                <td class="oneline onelineTd">student_gender</td>						                
+						                <td>The gender of student</td>
+						            </tr>
+					            
+						            <tr>     
+						                <td>3</td>
+						                <td class="oneline onelineTd">school_id</td>
+						                <td>The unique identification number of student’s school</td>
+						            </tr>						             
+						            
+						            <tr>     
+						                <td>4</td>
+						                <td class="oneline onelineTd">class_id</td>						                
+						                <td>The unique identification number of student’s class</td>
+						            </tr>
+						            
+						            
+						            
+						            
+						            
+						     </table>
+						</div>
+				
+						
+						
+						<div style = "height: 50px"></div>
+						
+						<h5>学校基本信息数据字段说明</h5>
+						
+						<div class="table_grad scroll_tablex">
+						      <table class="table_tab responsive">
+						            <tr>
+						               
+						               <th>No.</th>
+						               <th>Field Name</th>						               
+						               <th>Description</th>
+						               
+						           </tr>
+
+						           <tr>     
+						                <td>1</td>
+						                <td class="oneline onelineTd">school_id</td>						                
+						                <td>The unique identification number of student</td>
+						            </tr>						            
+						            
+						            <tr>     
+						                <td>2</td>
+						                <td class="oneline onelineTd">school_type</td>						                
+						                <td>The type of school, typically including regular junior secondary school, combined secondary school, nine-year school, and secondary school for minority</td>
+						            </tr>
+					            
+						            <tr>     
+						                <td>3</td>
+						                <td class="oneline onelineTd">dist_to_downtown</td>
+						                <td>The distance from school to the region’s downtown</td>
+						            </tr>						             
+						            
+						            <tr>     
+						                <td>4</td>
+						                <td class="oneline onelineTd">rate_higher_education</td>						                
+						                <td>The proportion of the teachers with a bachelor degree or above</td>
+						            </tr>
+									
+									<tr>     
+						                <td>5</td>
+						                <td class="oneline onelineTd">rate_master_degree_or_above</td>						                
+						                <td>The proportion of the teachers with a master degree or above</td>
+						            </tr>   
+    
+						     </table>
+						</div>
+						
+						<div style = "height: 50px"></div>
+				
+				
+				
+						<h5>学习者在线测评信息数据字段说明（包括微测和总测）</h5>
+						<div class="table_grad scroll_tablex">
+						      <table class="table_tab responsive">
+						            <tr>
+						               
+						               <th>No.</th>
+						               <th>Field Name</th>						               
+						               <th>Description</th>
+						               
+						           </tr>
+
+						           <tr>     
+						                <td>1</td>
+						                <td class="oneline onelineTd">student_id</td>						                
+						                <td>The unique identification number of student</td>
+						            </tr>						            
+						            
+						            <tr>     
+						                <td>2</td>
+						                <td class="oneline onelineTd">subject_abbr</td>						                
+						                <td>The abbreviation of subject</td>
+						            </tr>
+					            
+						            <tr>     
+						                <td>3</td>
+						                <td class="oneline onelineTd">exam_id</td>
+						                <td>The unique identification number of test</td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>4</td>
+						                <td class="oneline onelineTd">question_id</td>
+						                <td>The unique identification number of question</td>						               
+						            </tr>						            
+						            
+						            <tr>     
+						                <td>5</td>
+						                <td class="oneline onelineTd">concept</td>						                
+						                <td>The concept(s) associated with the question</td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>6</td>
+						                <td class="oneline onelineTd">score</td>
+						                <td>The student’s score on the question</td>
+						            </tr>						            
+						            
+						            <tr>     
+						                <td>7</td>
+						                <td class="oneline onelineTd">full_score</td>						                
+						                <td>The full score of the question</td>
+						            </tr>
+									
+						            <tr>     
+						                <td>8</td>
+						                <td class="oneline onelineTd">time_access</td>						                
+						                <td>The system access time of the student</td>
+						            </tr>		            
+						             
+						     </table>
+						</div>
+						
+						<div style = "height: 50px"></div>
+						
+						<h5>学习者家庭信息数据字段说明</h5>
+						<div class="table_grad scroll_tablex">
+						      <table class="table_tab responsive">
+						            <tr>
+						               
+						               <th>No.</th>
+						               <th>Field Name</th>						               
+						               <th>Description</th>
+						               
+						           </tr>
+
+						           <tr>     
+						                <td>1</td>
+						                <td class="oneline onelineTd">student_id</td>						                
+						                <td>The unique identification number of student</td>
+						            </tr>						            
+						            
+						            <tr>     
+						                <td>2</td>
+						                <td class="oneline onelineTd">age_father</td>						                
+						                <td>The age of student’s father</td>
+						            </tr>
+					            
+						            <tr>     
+						                <td>3</td>
+						                <td class="oneline onelineTd">age_mother</td>
+						                <td>The age of student’s mother</td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>4</td>
+						                <td class="oneline onelineTd">edubg _father</td>
+						                <td>Father’s education background</td>						               
+						            </tr>						            
+						            
+						            <tr>     
+						                <td>5</td>
+						                <td class="oneline onelineTd">edubg _mother</td>						                
+						                <td>Mother’s education background</td>
+						            </tr>
+						            
+						            <tr>     
+						                <td>6</td>
+						                <td class="oneline onelineTd">affiliation_father</td>
+						                <td>The employer’s type typically including public sector, state-owned enterprise, collective enterprise, private enterprise, foreign-funded enterprise, etc.</td>
+						            </tr>						            
+						            
+						            <tr>     
+						                <td>7</td>
+						                <td class="oneline onelineTd">affiliation_mother</td>						                
+						                <td>The employer’s type typically including public sector, state-owned enterprise, collective enterprise, private enterprise, foreign-funded enterprise, etc.</td>
+						            </tr>
+									
+						            <tr>     
+						                <td>8</td>
+						                <td class="oneline onelineTd">family_income</td>						                
+						                <td>The annual income of the student’s family</td>
+						            </tr>
+
+									<tr>     
+						                <td>9</td>
+						                <td class="oneline onelineTd">is_only_child</td>						                
+						                <td>Whether the student is the only child of the family</td>
+						            </tr>
+									
+									<tr>     
+						                <td>10</td>
+						                <td class="oneline onelineTd">live_on_campus</td>						                
+						                <td>Whether the student lives on campus or not</td>
+						            </tr>
+									
+									<tr>     
+						                <td>11</td>
+						                <td class="oneline onelineTd">gathering_frequency_father</td>						                
+						                <td>How often the student gathering with his/her father</td>
+						            </tr>
+									
+									<tr>     
+						                <td>12</td>
+						                <td class="oneline onelineTd">gathering_frequency_mother</td>						                
+						                <td>How often the student gathering with his/her mother</td>
+						            </tr>
+									
+									<tr>     
+						                <td>13</td>
+						                <td class="oneline onelineTd">family_traveling_times</td>						                
+						                <td>How many times the student went traveling with the family last year</td>
+						            </tr>
+						             
+						     </table>
+						</div>
+						
+						
+						
+						<div style = "height: 50px"></div>
+						
+						<h5>学习者认知水平测验信息数据字段说明</h5>
+						
+						<div class="table_grad scroll_tablex">
+						      <table class="table_tab responsive">
+						            <tr>
+						               
+						               <th>No.</th>
+						               <th>Field Name</th>						               
+						               <th>Description</th>
+						               
+						           </tr>
+
+						           <tr>     
+						                <td>1</td>
+						                <td class="oneline onelineTd">student_id</td>						                
+						                <td>The unique identification number of student</td>
+						            </tr>						            
+						            
+						            <tr>     
+						                <td>2</td>
+						                <td class="oneline onelineTd">psy_score</td>						                
+						                <td>The student’s cognitive intelligence score</td>
+						            </tr>					            
+   
+						     </table>
+						</div>
+						
+						
+						
+						
+						
+						
+						
+				
+					
+				
+			</div>
+		
+
+
+		<!-- end html -->
+		</div>
+
+		<!-- footer -->
+		<html>
+	<footer class="footer">
+		<div class="copyright">
+			Copyright © 2017-2021 BNU AICFE. All Rights Reserved.
+			<a href="https://beian.miit.gov.cn" target="_blank">京ICP备18047080号-1</a>
+		</div>
+	</footer>
+</html>
+	</section>
+</body>
+</html>

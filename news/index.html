@@ -1,0 +1,506 @@
+<!doctype html>
+<html class="" style="">
+<!-- head -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>AI Lab @ AICFE - 人工智能实验室</title>
+	<meta name="google-site-verification" content="zVfNgWpnktSoBlmPD9FmAivRwc7AmrJ3HcI4ANzb_ag" />
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="baidu-site-verification" content="r5znRc9TGh">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="Keywords"
+		content="BNU AI LAB, 北京师范大学|人工智能实验室, 北师大|人工智能实验室, 北师大高精尖AI, AI LAB">
+	<meta name="description"
+		content="AI Lab（人工智能实验室）作为未来教育高精尖创新中心的科研部门之一，致力于借助计算机科学和人工智能相关领域的技术，全面理解学习者的学习过程，驱动个性化学习和泛在学习的实现；同时利用技术改善教育教学环境，提升教育质量，促进教育公平。">
+	<meta name="format-detection" content="telephone=no,email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="author" content="AICFE">
+	<meta name="copyright" content="AICFE">
+	<meta name="robots" content="index,follow">
+	<link href="/images/logos.png" type="image/png" rel="shortcut icon">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/idangerous.swiper.css">
+
+	<script>
+	(function(doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var designWidth  = 1920; // 设计稿宽度
+				var designHeight = 1080; // 设计稿高度
+				var maxWidth     = 1920; // 设计稿最大宽度
+				var maxHeight    = 1080; // 设计稿最大高度
+				var clientWidth  = docEl.clientWidth;
+				var clientHeight = docEl.clientHeight;
+				var baseFontSize = 100; // 根元素基准字体大小
+				if ( (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+					//移动端
+					docEl.setAttribute("class", "m"); 
+					baseFontSize = 256; // 根元素基准字体大小
+					// console.log('m');
+					$('.header').addClass('fixed');
+				} else {
+					//PC端
+					if(docEl.getAttribute("class") == "index")
+						docEl.setAttribute("class", "pc indexpc");
+					else
+						docEl.setAttribute("class", "pc pagepc");
+					baseFontSize = 100; // 根元素基准字体大小
+					// console.log('pc');
+				}
+
+				if (!clientWidth) return;
+				if (clientWidth / clientHeight > designWidth / designHeight) {
+					if (clientHeight <= maxHeight) {
+						docEl.style.fontSize = clientHeight / designHeight * baseFontSize + "px";
+					} else {
+						docEl.style.fontSize = maxHeight / designHeight * baseFontSize + "px";
+					}
+				} else {
+					if (clientWidth <= maxWidth) {
+						docEl.style.fontSize = clientWidth / designWidth * baseFontSize + "px";
+					} else {
+						docEl.style.fontSize = maxWidth / designWidth * baseFontSize + "px";
+					}
+				}
+			};
+
+		// Abort if browser does not support addEventListener
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+	</script>
+
+	<script type="text/javascript" src="/js/idangerous.swiper.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="/js/sona.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/jquery.i18n.properties.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+</head>
+</html>
+
+<style>
+	.split {
+		margin-bottom: 5px;
+		border-width: 1px;
+		border-color: #987cb9;
+		border-bottom-style: dashed;
+		display: flex;
+		align-items: center;
+	}
+
+	.title {
+		width: 89%;
+	}
+	
+	.date {
+		width: 11%;
+		text-align: right;
+	}
+</style>
+
+<body class="lang-cn" style="">
+	<section class="g-wrap">
+		<!-- header -->
+		<div class="header fixed on">
+		<h1 class="head-logo" title="AI Lab">AI Lab</h1>
+		<a class="head-logolink" href="index">AI Lab</a>
+		<div class="lang">
+			<a href="javascript:;" id="en" class=" ">En</a>
+			<span>/</span>
+			<a href="javascript:;" id="cn" class="on">中</a>
+		</div>
+		<div class="navbar">
+			<ul>
+				<li )>
+					<a href="index">
+						<span>首页</span>
+					</a>
+				</li>
+				<li )>
+					<a href="members">
+						<span>成员</span>
+					</a>
+				</li>
+				<li )>
+					<a href="papers">
+						<span>研究成果</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="news">
+						<span>新闻</span>
+					</a>
+				</li>
+				<li>
+					<a href="academic">
+						<span>合作</span>
+					</a>
+				</li>
+				<li>
+					<a href="recruit">
+						<span>招聘</span>
+					</a>
+				</li>
+				<li>
+					<a href="data">
+						<span>数据</span>
+					</a>
+				</li>
+				
+				<!--
+				<li th:class="${page} == 'about' ? 'active' : ''">
+					<a href="about">
+						<span>关于</span>
+					</a>
+				</li>
+				-->
+				
+			</ul>
+		</div>
+		<a href="javascript:;" class="nav_btn"></a>
+	</div>
+
+		<div class="container">
+			<div class="news-page-title news-title-common">新闻</div>
+			
+			<div class="news-list clearfix">
+				<ul class="list">
+					<li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/118135.html" target="_black">
+				        	汉字溯源：一种汉字学习智能系统
+				        </a>
+				        <span class="date">2021-07-06</span> 
+				    </li>
+					<li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/117067.html" target="_black">
+				        	陈鹏鹤等：基于问题行为管理的智能助理研究
+				        </a>
+				        <span class="date">2021-06-23</span> 
+				    </li>
+				    
+					<li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/117064.html" target="_black">
+				        	卢宇等：雷达数学——数学学科智能导学系统
+				        </a>
+				        <span class="date">2021-06-23</span> 
+				    </li>
+				    
+					<li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/116270.html" target="_black">
+				        	北师大高精尖中心与天星教育签署合作研发协议
+				        </a>
+				        <span class="date">2021-06-17</span> 
+				    </li>
+				    
+					<li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/110336.html" target="_black">
+				        	中小学人工智能教育公开课成功举办
+				        </a>
+				        <span class="date">2021-03-12</span> 
+				    </li>
+				    
+					<li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/110441.html" target="_black">
+				        	北师大高精尖中心研究团队参加人工智能领域顶级国际会议AAAI并展示研究成果
+				        </a>
+				        <span class="date">2021-02-11</span> 
+				    </li>
+				    
+				    <li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/108589.html" target="_black">
+				        	“AI好老师”项目获国际人工智能联合会 IJCAI “最受大众欢迎”奖
+				        </a>
+				        <span class="date">2021-02-03</span> 
+				    </li>
+
+				    <li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/106707.html" target="_black">
+				        	北师大高精尖中心中小学人工智能课程正式发布
+				        </a>
+				        <span class="date">2020-12-22</span> 
+				    </li>
+
+				    <li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/106133.html" target="_black">
+				        	“开放辅导”与“智能教育机器人”分获亚洲数字化学习论坛（eLearning Forum Asia, eLFA）金奖与银奖 
+				        </a>
+				        <span class="date">2020-12-11</span> 
+				    </li>
+
+				    <li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/105232.html" target="_black">
+				        	中芬联合学习创新研究院2020年“人工智能与学习”年会召开
+				        </a>
+				        <span class="date">2020-11-27</span> 
+				    </li>
+
+				    <li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/102968.html" target="_black">
+				        	步步高教育电子有限公司一行来访探讨大数据和人工智能技术在教育中的应用
+				        </a>
+				        <span class="date">2020-10-21</span> 
+				    </li>
+
+				    <li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/102502.html" target="_black">高精尖中心在人工智能教育领域持续开展研发</a>
+				        <span class="date">2020-10-13</span> 
+				    </li>
+				    <li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/99958.html" target="_black">中心合作出版图书获Springer出版社奖项</a>
+				        <span class="date">2020-08-25</span> 
+				    </li>
+				    <li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/99891.html" target="_black">CCTV9央视纪录频道《育见未来》报道未来教育高精尖创新中心：人工智能赋能教育，探索未来教育新生态</a>
+				        <span class="date">2020-08-21</span> 
+				    </li>
+				    <li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/98592.html" target="_black">骈扬等：基于游戏化的智能导学系统冷启动解决方案研究</a>
+				        <span class="date">2020-07-20</span> 
+				    </li>
+				    <li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/98591.html" target="_black">陈鹏鹤等：基于对话系统的学生心理需求诊断研究</a>
+				        <span class="date">2020-07-20</span> 
+				    </li>
+				    <li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/98590.html" target="_black">卢宇等：基于深度知识追踪模型的可解释性研究</a>
+				        <span class="date">2020-07-20</span> 
+				    </li>
+				    <li class="split">
+				        <a class="title" href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/94499.html" target="_black">北师大高精尖中心人工智能实验室多篇论文被AIED-2020接收</a>
+				        <span class="date">2020-05-11</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/92991.html" target="_black"  class="title" >“移动学习”教育部-中国移动联合实验室2019年度建设项目结题会顺利召开</a>
+				        <span class="date">2020-04-22</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/89367.html" target="_black"  class="title" >面对疫情 展望未来 | 人工智能大有可为</a>
+				        <span class="date">2020-02-28</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/89038.html" target="_black"  class="title" >芬兰阿尔托大学学者到访中心 共议数学学科的在线学习和智能教学系统</a>
+				        <span class="date">2020-01-20</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/86981.html" target="_black"  class="title" >韩国国家教育电视台采访报道未来教育高精尖创新中心</a>
+				        <span class="date">2020-01-02</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/86537.html" target="_black"  class="title" >中心人工智能团队受邀参加中国教育科技大会并获奖</a>
+				        <span class="date">2019-12-19</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/84774.html" target="_black"  class="title" >中心接待腾讯云与智慧产业事业群代表团来访</a>
+				        <span class="date">2019-12-03</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/83988.html" target="_black"  class="title" >“人工智能教育驱动下的教育智能机器人” 荣获教育部学校规划建设发展中心未来学校创新成果</a>
+				        <span class="date">2019-11-25</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/82279.html" target="_black"  class="title" >荷兰乌得勒支大学Paul Drijvers教授同中心科研人员基于数学智能教学系统开展深入交流</a>
+				        <span class="date">2019-11-14</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/82168.html" target="_black"  class="title" >中心将与加拿大多伦多大学在知识建构领域开展合作</a>
+				        <span class="date">2019-11-12</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/80627.html" target="_black"  class="title" >中心“面向育人问题的对话服务机器人研究”项目获2019年CCF-腾讯犀牛鸟科研基金</a>
+				        <span class="date">2019-10-21</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/80398.html" target="_black"  class="title" >人工智能支持下的智能教学系统与游戏化学习工作坊成功举办</a>
+				        <span class="date">2019-10-16</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/79157.html" target="_black"  class="title" >未来教育·育见未来 ——2019年北京师范大学未来教育高精尖创新中心年中工作总结暨表彰大会成功举行</a>
+				        <span class="date">2019-09-12</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/79125.html" target="_black"  class="title" >“开放辅导” “人工智能教师”| 北京师范大学未来教育高精尖创新中心团队在e-learning Korea 2019国际会议上分享中心在教育公共服务领域的实践与理论研究</a>
+				        <span class="date">2019-09-07</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/78859.html" target="_black"  class="title" >开放大学魏顺平老师团队来访 交流人工智能教育应用</a>
+				        <span class="date">2019-09-05</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/77851.html" target="_black"  class="title" >祝贺|北京师范大学未来教育高精尖创新中心人工智能团队荣获国际人工智能联合会议IJCAI“最佳机器人视频”奖</a>
+				        <span class="date">2019-08-17</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/76984.html" target="_black"  class="title" >人工智能与教育大数据峰会·2019： 未来教育高精尖创新中心承办“人工智能时代的教育与智能教学系统”分论坛</a>
+				        <span class="date">2019-08-03</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/76823.html" target="_black"  class="title" >教育部教师工作司、北京市教育委员会赴未来教育高精尖创新中心开展“不忘初心 牢记使命”主题教育调研活动</a>
+				        <span class="date">2019-07-23</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/76589.html" target="_black"  class="title" >“智能技术与教育前沿合作研究”会议获得圆满成功</a>
+				        <span class="date">2019-07-09</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/75807.html" class="title" target="_black">海内外专家及教育技术知名人士汇集 共探人工智能时代未来教育发展趋势—ISO/IEC JTC1/SC36第32届全会及工作组会议开放论坛顺利召开</a>
+				        <span class="date">2019-06-29</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/75702.html"  class="title" target="_black">海内外专家齐聚北师大，共议教育教学信息技术标准化——ISO/IEC JTC 1/SC 36第32届全会及工作组会议开幕式顺利举行</a>
+				        <span class="date">2019-06-25</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/75149.html" target="_black"  class="title" >北京智源人工智能研究院来访中心，共探人工智能+教育发展道路</a>
+				        <span class="date">2019-06-06</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/75044.html" target="_black"  class="title" >香港教育局局长杨润雄来访未来教育高精尖创新中心，共促中国教育事业新发展</a>
+				        <span class="date">2019-05-29</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/74873.html" target="_black"  class="title" >第三届中美芬三方工作坊“21世纪人工智能技术在教育中的应用” 取得圆满成功</a>
+				        <span class="date">2019-05-29</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/xzky/74805.html" target="_black"  class="title" >第十一届知识管理与数位学习工作坊（上）—“在运用技术进行学习的过程中培养批判性思维和创新力”取得圆满成功</a>
+				        <span class="date">2019-05-22</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/74952.html" target="_black"  class="title" >Mohamed Ally教授深度参与中心工作</a>
+				        <span class="date">2019-05-20</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/74251.html" target="_black"  class="title" >多家知名媒体齐聚中心 采访人工智能+教育应用成果</a>
+				        <span class="date">2019-05-14</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/74400.html" target="_black"  class="title" >新加坡国立大学吴华宇博士“数据科学发展研究” 讲座圆满结束</a>
+				        <span class="date">2019-05-11</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/72761.html" target="_black"  class="title" >中心研究人员受邀参加第35届国际数据工程会议并演示研究成果</a>
+				        <span class="date">2019-04-13</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/71132.html" target="_black"  class="title" >2019年知识建构论坛圆满举行</a>
+				        <span class="date">2019-03-19</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/70019.html" target="_black"  class="title" >中心人工智能团队赴芬兰参加“21世纪教育中的智能技术工具”研讨会</a>
+				        <span class="date">2019-02-20</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/67674.html" target="_black"  class="title" >中心举行2018年终述职总结系列会议</a>
+				        <span class="date">2019-01-28</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/67661.html" target="_black"  class="title" >北京师范大学未来教育高精尖创新中心2018年年会召开</a>
+				        <span class="date">2019-01-25</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/59753.html" target="_black"  class="title" >美国斯坦福大学Chris Piech博士来访中心</a>
+				        <span class="date">2018-12-17</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/58654.html" target="_black"  class="title" >科技赋能教育创新 未来教育高精尖创新中心的个性化公共服务模式探索从未止步</a>
+				        <span class="date">2018-12-05</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/58362.html" target="_black"  class="title" >韩国时空集团来访未来教育高精尖创新中心</a>
+				        <span class="date">2018-11-29</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/58173.html" target="_black"  class="title" >中心研究人员赴新加坡参加2018 IEEE国际数据挖掘大会</a>
+				        <span class="date">2018-11-27</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/58168.html" target="_black"  class="title" >国际教育学院网络（INEI）参会专家来访未来教育高精尖创新中心</a>
+				        <span class="date">2018-11-23</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/57749.html" target="_black"  class="title" >巴西教育技术专家Ig Ibert Bittencourt和 Seiji Isotani到访中心</a>
+				        <span class="date">2018-11-14</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/57162.html" target="_black"  class="title" >第五届“大数据时代的未来教育”论坛顺利闭幕</a>
+				        <span class="date">2018-11-10</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/57158.html" target="_black"  class="title" >《人工智能+教育》蓝皮书正式发布</a>
+				        <span class="date">2018-11-10</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/56779.html" target="_black"  class="title" >中国—美国—芬兰三方教育技术研讨会第一站——以“21世纪的教育工具”为主题的研讨会在斯坦福大学召开</a>
+				        <span class="date">2018-10-26</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/55981.html" target="_black"  class="title" >《育见未来》拍摄组来访未来教育高精尖创新中心 拍摄活动取得圆满成功</a>
+				        <span class="date">2018-10-09</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/55187.html" target="_black"  class="title" >“创新教学能否达成教学创新”工作坊顺利举办</a>
+				        <span class="date">2018-09-15</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/55184.html" target="_black"  class="title" >丹麦奥尔堡大学教育代表团来访并推进合作</a>
+				        <span class="date">2018-09-13</span> 
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/54725.html" target="_black"  class="title" >中心盛邀来自高校、中学、教育科技企业的10余位专家为《人工智能教育蓝皮书》建言献策</a>
+				        <span class="date">2018-09-06</span> 
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/54722.html" target="_black"  class="title" >基于大数据的教育资源理解和学生认知画像方法研究及应用</a>
+				        <span class="date">2018-09-06</span> 
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/54174.html" target="_black"  class="title" >第十届知识管理与数位学习工作坊（下）顺利结束</a>
+				        <span class="date">2018-08-31</span> 
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/53776.html" target="_black"  class="title" >北京师范大学校长董奇教授莅临中心2018年年中工作总结暨表彰大会并作重要致辞</a>
+				        <span class="date">2018-08-06</span> 
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/53585.html" target="_black"  class="title" >中心接待北京师范大学教育技术学夏令营</a>
+				        <span class="date">2018-07-25</span> 
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/53478.html" target="_black"  class="title" >中心接待全国中学生教育学夏令营</a>
+				        <span class="date">2018-07-19</span> 
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/53071.html" target="_black"  class="title" >中心研究人员参加人工智能教育领域多个国际会议</a>
+				        <span class="date">2018-07-03</span> 
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/52206.html" target="_black"  class="title" >山西大学计算机与信息技术学院副院长李茹教授一行访问中心</a>
+				        <span class="date">2018-06-07</span> 
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/51382.html" target="_black"  class="title" >墨尔本大学副校长Gregor Kennedy教授及腾讯教育创想合作中心团队来访</a>
+				        <span class="date">2018-05-26</span> 
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/49753.html" target="_black"  class="title" >德国汉堡大学张建伟院士来访 了解中心人工智能教育研究</a>
+				        <span class="date">2018-05-01</span> 
+				    </li>
+				    <li class="split">
+				        <a href="https://aic-fe.bnu.edu.cn/xwdt/zxxw/40089.html" target="_black"  class="title" >昆士兰科技大学校长来访中心</a>
+				        <span class="date">2017-11-17</span> 
+				    </li>  
+				</ul>
+				    
+			</div>
+		</div>
+
+		<!-- footer -->
+		<html>
+	<footer class="footer">
+		<div class="copyright">
+			Copyright © 2017-2021 BNU AICFE. All Rights Reserved.
+			<a href="https://beian.miit.gov.cn" target="_blank">京ICP备18047080号-1</a>
+		</div>
+	</footer>
+</html>
+	</section>
+
+</body>
+</html>
