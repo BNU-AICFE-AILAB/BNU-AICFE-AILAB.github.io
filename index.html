@@ -1,17 +1,632 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="index" style="">
 
+<!-- head -->
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
+	<meta charset="UTF-8">
+	<title>AI Lab @ AICFE - 人工智能实验室</title>
+	<meta name="google-site-verification" content="zVfNgWpnktSoBlmPD9FmAivRwc7AmrJ3HcI4ANzb_ag" />
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="baidu-site-verification" content="r5znRc9TGh">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="Keywords"
+		content="BNU AI LAB, 北京师范大学|人工智能实验室, 北师大|人工智能实验室, 北师大高精尖AI, AI LAB">
+	<meta name="description"
+		content="AI Lab（人工智能实验室）作为未来教育高精尖创新中心的科研部门之一，致力于借助计算机科学和人工智能相关领域的技术，全面理解学习者的学习过程，驱动个性化学习和泛在学习的实现；同时利用技术改善教育教学环境，提升教育质量，促进教育公平。">
+	<meta name="format-detection" content="telephone=no,email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="author" content="AICFE">
+	<meta name="copyright" content="AICFE">
+	<meta name="robots" content="index,follow">
+	<link href="/images/logos.png" type="image/png" rel="shortcut icon">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/idangerous.swiper.css">
+
+	<script>
+	(function(doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var designWidth  = 1920; // 设计稿宽度
+				var designHeight = 1080; // 设计稿高度
+				var maxWidth     = 1920; // 设计稿最大宽度
+				var maxHeight    = 1080; // 设计稿最大高度
+				var clientWidth  = docEl.clientWidth;
+				var clientHeight = docEl.clientHeight;
+				var baseFontSize = 100; // 根元素基准字体大小
+				if ( (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+					//移动端
+					docEl.setAttribute("class", "m"); 
+					baseFontSize = 256; // 根元素基准字体大小
+					// console.log('m');
+					$('.header').addClass('fixed');
+				} else {
+					//PC端
+					if(docEl.getAttribute("class") == "index")
+						docEl.setAttribute("class", "pc indexpc");
+					else
+						docEl.setAttribute("class", "pc pagepc");
+					baseFontSize = 100; // 根元素基准字体大小
+					// console.log('pc');
+				}
+
+				if (!clientWidth) return;
+				if (clientWidth / clientHeight > designWidth / designHeight) {
+					if (clientHeight <= maxHeight) {
+						docEl.style.fontSize = clientHeight / designHeight * baseFontSize + "px";
+					} else {
+						docEl.style.fontSize = maxHeight / designHeight * baseFontSize + "px";
+					}
+				} else {
+					if (clientWidth <= maxWidth) {
+						docEl.style.fontSize = clientWidth / designWidth * baseFontSize + "px";
+					} else {
+						docEl.style.fontSize = maxWidth / designWidth * baseFontSize + "px";
+					}
+				}
+			};
+
+		// Abort if browser does not support addEventListener
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+	</script>
+
+	<script type="text/javascript" src="/js/idangerous.swiper.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="/js/sona.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/jquery.i18n.properties.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
 </head>
-
-<body>
-    <h1>Hello Github Pages</h1>
-    <script src="./index.js"></script>
-</body>
-
 </html>
 
+<body style="" class="lang-cn">
+	<!-- header -->
+	<div class="header fixed on">
+		<h1 class="head-logo" title="AI Lab">AI Lab</h1>
+		<a class="head-logolink" href="index">AI Lab</a>
+		<div class="lang">
+			<a href="javascript:;" id="en" class=" ">En</a>
+			<span>/</span>
+			<a href="javascript:;" id="cn" class="on">中</a>
+		</div>
+		<div class="navbar">
+			<ul>
+				<li class="active")>
+					<a href="index.html">
+						<span>首页</span>
+					</a>
+				</li>
+				<li )>
+					<a href="members">
+						<span>成员</span>
+					</a>
+				</li>
+				<li )>
+					<a href="papers">
+						<span>研究成果</span>
+					</a>
+				</li>
+				<li>
+					<a href="news">
+						<span>新闻</span>
+					</a>
+				</li>
+				<li>
+					<a href="academic">
+						<span>合作</span>
+					</a>
+				</li>
+				<li>
+					<a href="recruit">
+						<span>招聘</span>
+					</a>
+				</li>
+				<li>
+					<a href="data">
+						<span>数据</span>
+					</a>
+				</li>
+				
+				<!--
+				<li th:class="${page} == 'about' ? 'active' : ''">
+					<a href="about">
+						<span>关于</span>
+					</a>
+				</li>
+				-->
+				
+			</ul>
+		</div>
+		<a href="javascript:;" class="nav_btn"></a>
+	</div>
+
+	<div class="swiper-container swiper-container-h">
+		<div class="swiper-pagination-h">
+			<span
+				class="swiper-pagination-switch swiper-visible-switch swiper-active-switch">
+				<em class="cndot">AI Lab</em>
+				<em class="endot" style="display: none;">AI Lab</em>
+			</span>
+			<span class="swiper-pagination-switch">
+				<em class="cndot">研究与应用</em>
+				<em class="endot" style="display: none;">Research Areas</em>
+			</span>
+			<span class="swiper-pagination-switch">
+				<em class="cndot">研究成果</em>
+				<em class="endot" style="display: none;">Publications</em>
+			</span>
+			<span class="swiper-pagination-switch">
+				<em class="cndot">最新动态</em>
+				<em class="endot" style="display: none;">News</em>
+			</span>
+		</div>
+		<div class="swiper-wrapper swiper-wrapper-h"
+			style="width: 1920px; height: 4935px; transform: translate3d(0px, 0px, 0px); transition-duration: 0.3s;">
+			<div class="swiper-slide swiper-slide-visible swiper-slide-active"
+				style="width: 1920px; height: 987px;">
+				<div class="page-wr page1">
+					<div class="logo">
+						<img class="logo_img" src="/images/aicfe.png"
+							srcset="/images/aicfe.png" alt=" AI Lab">
+					</div>
+					<div class="page1-title-slogen">AI Lab @ AICFE</div>
+					<div class="page1-title">未来教育高精尖中心人工智能实验室</div>
+					<div class="page1-info">
+						公司级AI战略蓄势待发，聚集全球数十位人工智能科学家、70余位世界一流AI博士。
+						<br>
+						专注机器学习、计算机视觉、语音识别、自然语言处理等人工智能领域的研究，孵化出机器翻译、语音聊天、智能问答、图像理解、棋类博弈、无人驾驶等项目，探索未来技术的商业应用前景。
+						<br>
+						基于亿万用户海量数据及在互联网各垂直领域的技术优势，立志打造世界顶尖人工智能团队。
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide" style="width: 1920px; height: 987px;">
+				<div class="page-wr page2">
+					<div class="page-content">
+						<div class="study-title">研究与应用领域</div>
+						<div class="search-cats clearfix">
+							<a href="javascript:;" class="active">研究领域</a>
+							<a href="javascript:;">应用领域</a>
+						</div>
+						<div class="paper-container-s">
+							<div class="swiper-wrapper"
+								style="width: 3840px; height: 477.672px;">
+								<div
+									class="search-content swiper-slide swiper-slide-visible swiper-slide-active"
+									style="width: 1920px; height: 477.672px;">
+									<ul>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-search11.png" alt="">
+											</i>
+											<h4>教育知识图谱构建</h4>
+											<p>海量教育信息结构化，使得知识表示更加贴近人类认知方式</p>
+										</li>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-search21.png" alt="">
+											</i>
+											<h4>教育数据挖掘</h4>
+											<p>探索教育数据中的隐含信息，优化教育决策</p>
+										</li>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-search31.png" alt="">
+											</i>
+											<h4>学习者建模</h4>
+											<p>对学习过程进行宏观刻画与微观描述，全面理解学习者</p>
+										</li>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-search41.png" alt="">
+											</i>
+											<h4>教育问答及对话系统</h4>
+											<p>赋予计算机系统对话能力，为师生答疑解惑</p>
+										</li>
+									</ul>
+								</div>
+								<div class="application-content swiper-slide"
+									style="width: 1920px; height: 477.672px;">
+									<ul>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-application11.png" alt="">
+											</i>
+											<div class="section">
+												<h4>领域知识构建及理解</h4>
+												<p>为各特定领域构建专属知识图谱，弥补深度学习模型在领域知识方面的缺陷</p>
+											</div>
+										</li>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-application21.png" alt="">
+											</i>
+											<div class="section">
+												<h4>学习者认知与交互行为分析</h4>
+												<p>借助数据深层理解学习者，促进个性化学习过程，并针对各类风险进行即时监测和诊断</p>
+											</div>
+										</li>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-application31.png" alt="">
+											</i>
+											<div class="section">
+												<h4>智能教育环境构建</h4>
+												<p>建立新型人机关系，自动感知师生需求并提供智能化服务，驱动泛在学习</p>
+											</div>
+										</li>
+										<li>
+											<i class="icon">
+												<img src="/images/icon-application41.png" alt="">
+											</i>
+											<div class="section">
+												<h4>教育智能机器人</h4>
+												<p>改变知识呈现方式，以更为生动形象的方式呈现教育资源，减轻学习者认知负荷</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="page-btn-area">
+							<a href="" target="_blank"
+								class="page2-btn btn-common">查看更多</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="swiper-slide" style="width: 1920px; height: 987px;">
+				<div class="page-wr page6">
+					<h2 class="page6-title ">研究成果</h2>
+					<div class="swiper-container paper-container-v">
+						<div class="swiper-wrapper paper-wrapper"
+							style="padding-left: 442.943px; padding-right: 442.943px; width: 11516.5px; height: 547.156px; transform: translate3d(-1771.77px, 0px, 0px); transition-duration: 0s;">
+							
+							<div class="swiper-slide paper-slide swiper-slide-duplicate"
+								style="width: 442.943px; height: 547.156px;">
+								<a class="paper-item"
+									href="papers"
+									target="_blank">
+									<div class="tit">2020 AIED</div>
+									<div class="tit-2">A Gamified Solution to the Cold-Start Problem of Intelligent Tutoring System</div>
+									<div class="txt">
+										Yang Pian, Yu Lu, Yuqi Huang, and Ig Bittencourt
+										<br>
+										2020
+									</div>
+									<div class="link">Read More</div>
+								</a>
+							</div>
+							
+							<div class="swiper-slide paper-slide swiper-slide-duplicate"
+								style="width: 442.943px; height: 547.156px;">
+								<a class="paper-item"
+									href="papers"
+									target="_blank">
+									<div class="tit">2020 AIED</div>
+									<div class="tit-2">Identification of Students' Need Deficiency Through A Dialogue System</div>
+									<div class="txt">
+										Penghe Chen, Yu Lu, Yan Peng, Jiefei Liu, and Qi Xu
+										<br>
+										2020
+									</div>
+									<div class="link">Read More</div>
+								</a>
+							</div>
+							
+							<div class="swiper-slide paper-slide swiper-slide-duplicate"
+								style="width: 442.943px; height: 547.156px;">
+								<a class="paper-item"
+									href="papers"
+									target="_blank">
+									<div class="tit">2020 AIED</div>
+									<div class="tit-2">Towards Interpretable Deep Learning Models for Knowledge Tracing</div>
+									<div class="txt">
+										Yu Lu, Deliang Wang, Qinggang Meng, and Penghe Chen
+										<br>
+										2020
+									</div>
+									<div class="link">Read More</div>
+								</a>
+							</div>
+													
+							<div class="swiper-slide paper-slide swiper-slide-duplicate"
+								style="width: 442.943px; height: 547.156px;">
+								<a class="paper-item"
+									href="papers"
+									target="_blank">
+									<div class="tit">2019 ICDE</div>
+									<div class="tit-2">CogLearn: A Cognitive Graph-Oriented Online Learning System</div>
+									<div class="txt">
+										Yang Pian, Yu Lu, Penghe Chen, Qinglong Duan
+										<br>
+										2019
+									</div>
+									<div class="link">Read More</div>
+								</a>
+							</div>
+							
+						</div>
+						<div class="paper-pagination-v hide">
+							<span class="swiper-pagination-switch swiper-visible-switch"></span>
+							<span
+								class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span>
+							<span class="swiper-pagination-switch swiper-visible-switch"></span>
+						</div>
+						<div class="swiper-button-next paper-button-next"></div>
+						<div class="swiper-button-prev paper-button-prev"></div>
+					</div>
+					<div class="page-btn-area">
+						<a href="papers" target="_blank"
+							class="page6-btn btn-common">查看全部论文</a>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide page8-wr" style="width: 1920px; height: 987px;">
+				<div class="page-wr page7">
+					<div class="page7-container">
+						<h2 class="page7-title">最新动态</h2>
+						<div class="page7-news-list clearfix">
+							<div class="news-item">
+								<a href="news1.html" target="_blank">
+									<div class="news-pic" style="background-image: url(/images/dongqi.jpg);"></div>
+									<div class="news-text">
+										<h4 class="news-title">2018年年中工作总结</h4>
+										<p class="news-desc">为加强中心各部之间的工作交流与进步，提升团队凝聚力，中心于2018年8月3日在京师学堂召开2018年中工作总结暨表彰大会。</p>
+										<div class="news-date">2018年8月3日</div>
+										<span class="readmore">Read More &gt;</span>
+									</div>
+								</a>
+							</div>
+							<div class="news-item">
+								<a href="news2.html" target="_blank">
+									<div class="news-pic" style="background-image: url(/images/xly.jpg);"></div>
+									<div class="news-text">
+										<h4 class="news-title">中心接待北京师范大学教育技术学夏令营</h4>
+										<p class="news-desc">2018年7月25日，由北京师范大学教育学部教育技术学院主办的夏令营来未来教育高精尖创新中心参观学习，中心分两批次接待了来自全国各高校的60余名教育技术学大三学生。</p>
+										<div class="news-date">2018年7月25日</div>
+										<span class="readmore">Read More &gt;</span>
+									</div>
+								</a>
+							</div>
+
+							<div class="news-item">
+								<a href="news3">
+									<div class="news-pic" style="background-image: url(/images/zstp.jpg);"></div>
+									<div class="news-text">
+										<h4 class="news-title">中心研究人员参加人工智能教育领域多个国际会议</h4>
+										<p class="news-desc">6月24-30日，第13届学习科学国际会议（13th International Conference of the Learning Sciences, ICLS）、19届人工智能教育国际会议（19th International Conference on Artificial Intelligence in Education, AIED）、第5届ACM（5th Annual ACM Conference on Learning at Scale, L@S）在英国伦敦举办。高精尖中心人工智能实验室主任卢宇博士、研究员陈鹏鹤博士、助理研究员陈晨，学习科学实验室张立山博士的研究成果被AIED和L@S会议接收并参加会议。</p>
+										<div class="news-date">2018年7月1日</div>
+										<span class="readmore">Read More &gt;</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div style="text-align: center;">
+							<a href="news" target="_blank" class="page7-btn btn-common">查看全部动态</a>
+						</div>
+					</div>
+				</div>
+				<!-- footer -->
+				<html>
+	<footer class="footer">
+		<div class="copyright">
+			Copyright © 2017-2021 BNU AICFE. All Rights Reserved.
+			<a href="https://beian.miit.gov.cn" target="_blank">京ICP备18047080号-1</a>
+		</div>
+	</footer>
+</html>
+			</div>
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination swiper-pagination-h"></div>
+	</div>
+
+	<script type="text/javascript">
+    // 判断UA
+    $(function () {
+        var Sys = {};
+        var ua = navigator.userAgent.toLowerCase();
+        var s;
+        (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? Sys.ie = s[1] :
+        (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+        (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+        (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+        (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+        (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+        // console.log(s);
+        if (Sys.ie){
+            // setTimeout(,100);
+            Swipie()
+        }else{
+            // setTimeout(,100);
+            Swip()
+        }
+       
+    });
+
+    // 页面内滚动
+    function Noscroll(index){
+        var $pageNoScrollWr = $('.swiper-wrapper-h').children('.swiper-slide').eq(index);
+        var $pageNoScroll = $pageNoScrollWr.find('.page-wr');
+        var $pageNoScrollCont = $pageNoScroll.children('.page-content');
+        var scrollHeight = $pageNoScrollCont.height()-$pageNoScroll.height();
+        if ($pageNoScrollCont.height() > $pageNoScroll.height()) {
+            $pageNoScrollWr.addClass("swiper-no-swiping");
+        }
+        
+        var startX;
+        var startY;
+        $pageNoScroll.on('touchstart',function(){
+            startX = event.touches[0].pageX;
+            startY = event.touches[0].pageY;
+        });
+
+        $pageNoScroll.on("touchmove",function(){
+            var x = event.touches[0].pageX;
+            var y = event.touches[0].pageY;
+            var dx = startX - x;
+            var dy = startY - y;
+            if(dy < 0){  //上滑
+                // console.log('up')
+                if($pageNoScroll.scrollTop() == 0){
+                   $pageNoScrollWr.removeClass("swiper-no-swiping");
+                }
+            }
+
+            if(dy > 0){  //下滑
+                // console.log('down')
+                if($pageNoScroll.scrollTop() == scrollHeight){
+                   $pageNoScrollWr.removeClass("swiper-no-swiping");
+                }
+            }
+
+        });
+
+        $pageNoScroll.scroll(function() {
+            // console.log($pageNoScroll.scrollTop(),scrollHeight)
+           
+            if($pageNoScroll.scrollTop() == 0){
+                $pageNoScrollWr.removeClass("swiper-no-swiping");
+            }
+
+            if($pageNoScroll.scrollTop() == scrollHeight){
+               $pageNoScrollWr.removeClass("swiper-no-swiping");
+            }   
+            
+        });
+    }
+    
+    // 默认swipr
+    function Swip(){
+        var swiperV = new Swiper('.swiper-container-h',{
+            pagination: '.swiper-pagination-h',
+            paginationClickable: true,
+            slidesPerView: 1,
+            mode: 'vertical',
+            // touchRatio : 0.5,
+            longSwipesRatio : 0,
+            mousewheelControl : true,
+            mousewheelControlForceToAxis : true,
+            keyboardControl : true,
+            simulateTouch: false,
+            // initialSlide :4,
+            noSwiping : true,
+            onSlideChangeStart: function(swiper){
+                if(!swiper.slides[0].isActive()){
+                    //新的slide是活动的
+                    // console.log(!swiperV.slides[0].isActive());
+                    $('.header').addClass('on');
+
+                } else{
+                    $('.header').removeClass('on');
+                }
+
+                // console.log(swiperV.activeIndex)
+                
+                Noscroll(swiperV.activeIndex);
+            },
+            paginationBulletRender: function (swiper, index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            }
+        });
+
+        var swiperH = new Swiper('.paper-container-v',{
+            pagination: '.paper-pagination-v',
+            paginationClickable: true,
+            slidesPerView: 3,
+            loop:true,
+            // centeredSlides: true,
+            watchActiveIndex: true,
+            initialSlide :1,
+            centeredSlides: !0,
+            watchSlidesProgress : true
+        })
+
+        var swiperS = new Swiper('.paper-container-s',{
+            onSlideChangeStart: function(swiper) {
+                $(".search-cats .active").removeClass('active');
+                $(".search-cats a").eq(swiper.activeLoopIndex).addClass('active');
+            }
+        });
+
+        $(".search-cats a").on('touchstart mousedown',function(e) {
+            e.preventDefault();
+            $(".search-cats .active").removeClass('active');
+            $(this).addClass('active');
+            swiperS.swipeTo( $(this).index() );
+        })
+
+
+                      
+          $('.paper-button-prev').on('click', function(e){
+            e.preventDefault()
+            swiperH.swipePrev()
+          })
+          $('.paper-button-next').on('click', function(e){
+            e.preventDefault()
+            swiperH.swipeNext()
+          })
+          // console.log('新的slide的位置是'+ swiperV.index());
+          dotShow();
+          loadProperties(); //中英文切换
+    }
+
+    // ie专用
+    function Swipie(){
+        var swiperV = new Swiper('.swiper-container-h',{
+            pagination: '.swiper-pagination-h',
+            paginationClickable: true,
+            slidesPerView: 1,
+            mode: 'vertical',
+            mousewheelControl : true,
+            keyboardControl : true,
+            simulateTouch: false,
+            onSlideChangeStart: function(){
+                if(!swiperV.slides[0].isActive()){
+                    //新的slide是活动的
+                    // console.log(!swiperV.slides[0].isActive());
+                    $('.header').addClass('on');
+                }else{
+                    $('.header').removeClass('on');
+                }
+
+                Noscroll(swiperV.activeIndex);
+            }
+          })
+          var swiperH = new Swiper('.paper-container-v',{
+            pagination: '.paper-pagination-v',
+            paginationClickable: true,
+            slidesPerView: 3,
+            loop:true,
+            // centeredSlides: true,
+            watchActiveIndex: true,
+            initialSlide :1,
+            centeredSlides: !0,
+            watchSlidesProgress : true
+        })
+                      
+          $('.paper-button-prev').on('click', function(e){
+            e.preventDefault()
+            swiperH.swipePrev()
+          })
+          $('.paper-button-next').on('click', function(e){
+            e.preventDefault()
+            swiperH.swipeNext()
+          })
+          // console.log('新的slide的位置是'+ swiperV.index());
+          dotShow();
+          loadProperties(); //中英文切换
+    }
+    </script>
+</body>
+</html>
